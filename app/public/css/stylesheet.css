@@ -1,0 +1,27 @@
+body {
+    background-image: url(../css/images/friendship-hands.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header {
+    margin:0px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: -1px 1px 0 #000,
+}
+
+h3{
+    margin-bottom: 30px;
+    color:white;
+    text-shadow: -1px 1px 0 #000;
+    font-weight: bold;
+}
+.heart {
+    color:rgb(241, 109, 188);
+    
+}
+.btn {
+    margin-top: 30px;
+    background-color:rgb(241, 109, 188);
+    border-color:rgb(241, 109, 188);
+}
