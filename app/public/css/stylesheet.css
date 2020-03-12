@@ -11,10 +11,13 @@ body {
 }
 
 h3{
-    margin-bottom: 30px;
     color:white;
-    text-shadow: -1px 1px 0 #000;
+    text-shadow: 2px 1px black;
     font-weight: bold;
+}
+
+.p1{
+    margin: 50px 0px;
 }
 .heart {
     color:rgb(241, 109, 188);
@@ -24,4 +27,11 @@ h3{
     margin-top: 30px;
     background-color:rgb(241, 109, 188);
     border-color:rgb(241, 109, 188);
+   
+}
+
+/* Survey Page */
+
+.a2 {
+    text-decoration: none;
 }
