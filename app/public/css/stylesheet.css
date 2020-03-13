@@ -4,13 +4,18 @@ body {
     background-size: cover;
 }
 .header {
-    margin:0px;
+   
     color: white;
     font-weight: bolder;
-    text-shadow: -1px 1px 0 #000,
+    text-shadow: 2px 1px #000,
 }
 
-h3{
+.my-4{
+    margin-top:80px;
+    
+}
+
+.fh3 {
     color:white;
     text-shadow: 2px 1px black;
     font-weight: bold;
@@ -32,6 +37,25 @@ h3{
 
 /* Survey Page */
 
+
+.sh3 {
+    color: rgb(34, 31, 31);
+   
+}
+
 .a2 {
     text-decoration: none;
+}
+
+.card {
+   background:  rgba(255, 255, 255, .5)
+
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group > p {
+    color: black;
 }
