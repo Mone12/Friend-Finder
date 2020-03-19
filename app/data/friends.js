@@ -1,6 +1,6 @@
 var friends = {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Brittney",
+    "photo":"https://www.pexels.com/photo/adult-attractive-beautiful-beauty-415829/",
     "scores":[
         5,
         1,
@@ -12,5 +12,141 @@ var friends = {
         5,
         4,
         1
+      ],
+    "name":"Ingrid",
+    "photo":"https://www.pexels.com/photo/woman-in-black-tank-top-wearing-eyeglasses-2100063/",
+    "scores":[
+        5,
+        2,
+        2,
+        2,
+        2,
+        4,
+        3,
+        3,
+        5,
+        2
+      ],
+
+      "name":"Justin",
+    "photo":"https://www.pexels.com/photo/photography-of-a-guy-wearing-green-shirt-1222271/",
+    "scores":[
+        4,
+        2,
+        5,
+        5,
+        5,
+        2,
+        2,
+        4,
+        4,
+        1
+      ],
+
+      "name":"Ali",
+    "photo":"https://www.pexels.com/photo/woman-wearing-orange-sweater-2613260/",
+    "scores":[
+        3,
+        3,
+        4,
+        4,
+        5,
+        2,
+        2,
+        4,
+        4,
+        3
+      ],
+
+      "name":"Jasmine",
+    "photo":"https://www.pexels.com/photo/portrait-photo-of-woman-718978/",
+    "scores":[
+        3,
+        3,
+        5,
+        4,
+        3,
+        2,
+        1,
+        5,
+        4,
+        3
+      ],
+
+      "name":"Chuck",
+    "photo":"https://www.pexels.com/photo/man-wearing-blue-crew-neck-shirt-2287252/",
+    "scores":[
+        3,
+        3,
+        5,
+        5,
+        4,
+        3,
+        3,
+        4,
+        5,
+        2
+      ],
+
+      "name":"Tyrone",
+    "photo":"https://www.pexels.com/photo/laughing-man-wearing-gray-v-neck-t-shirt-936119/",
+    "scores":[
+        2,
+        4,
+        2,
+        2,
+        3,
+        4,
+        4,
+        4,
+        4,
+        3
+      ],
+
+      "name":"Brad",
+    "photo":"https://www.pexels.com/photo/adult-beard-boy-casual-220453/",
+    "scores":[
+        2,
+        2,
+        3,
+        3,
+        5,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+
+      "name":"Miguel",
+    "photo":"https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-white-wall-2379004/",
+    "scores":[
+        5,
+        1,
+        4,
+        4,
+        3,
+        2,
+        4,
+        4,
+        3,
+        3
+      ],
+
+      "name":"Sasha",
+    "photo":"https://www.pexels.com/photo/smiling-woman-wearing-blue-sleeveless-top-2090658/",
+    "scores":[
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        5
       ]
   };
+
+  module.exports = friends;
