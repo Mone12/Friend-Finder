@@ -59,3 +59,8 @@ label {
 .form-group > p {
     color: black;
 }
+
+.pic {
+    height: 300px;
+    width: auto;
+}

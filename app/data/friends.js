@@ -1,6 +1,8 @@
-var friends = {
+var friends = [
+    {
+    
     "name":"Brittney",
-    "photo":"https://www.pexels.com/photo/adult-attractive-beautiful-beauty-415829/",
+    "photo":"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         5,
         1,
@@ -14,7 +16,7 @@ var friends = {
         1
       ],
     "name":"Ingrid",
-    "photo":"https://www.pexels.com/photo/woman-in-black-tank-top-wearing-eyeglasses-2100063/",
+    "photo":"https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         5,
         2,
@@ -29,7 +31,7 @@ var friends = {
       ],
 
       "name":"Justin",
-    "photo":"https://www.pexels.com/photo/photography-of-a-guy-wearing-green-shirt-1222271/",
+    "photo":"https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         4,
         2,
@@ -44,7 +46,7 @@ var friends = {
       ],
 
       "name":"Ali",
-    "photo":"https://www.pexels.com/photo/woman-wearing-orange-sweater-2613260/",
+    "photo":"https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300" ,
     "scores":[
         3,
         3,
@@ -59,7 +61,7 @@ var friends = {
       ],
 
       "name":"Jasmine",
-    "photo":"https://www.pexels.com/photo/portrait-photo-of-woman-718978/",
+    "photo":"https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         3,
         3,
@@ -74,7 +76,7 @@ var friends = {
       ],
 
       "name":"Chuck",
-    "photo":"https://www.pexels.com/photo/man-wearing-blue-crew-neck-shirt-2287252/",
+    "photo":"https://images.pexels.com/photos/2287252/pexels-photo-2287252.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         3,
         3,
@@ -89,7 +91,7 @@ var friends = {
       ],
 
       "name":"Tyrone",
-    "photo":"https://www.pexels.com/photo/laughing-man-wearing-gray-v-neck-t-shirt-936119/",
+    "photo":"https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300" ,
     "scores":[
         2,
         4,
@@ -104,7 +106,7 @@ var friends = {
       ],
 
       "name":"Brad",
-    "photo":"https://www.pexels.com/photo/adult-beard-boy-casual-220453/",
+    "photo":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         2,
         2,
@@ -119,7 +121,7 @@ var friends = {
       ],
 
       "name":"Miguel",
-    "photo":"https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-white-wall-2379004/",
+    "photo":"https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         5,
         1,
@@ -134,7 +136,7 @@ var friends = {
       ],
 
       "name":"Sasha",
-    "photo":"https://www.pexels.com/photo/smiling-woman-wearing-blue-sleeveless-top-2090658/",
+    "photo":"https://images.pexels.com/photos/2090658/pexels-photo-2090658.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         5,
         1,
@@ -147,6 +149,9 @@ var friends = {
         4,
         5
       ]
-  };
+    
+    },
+];
+
 
   module.exports = friends;
