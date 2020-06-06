@@ -1,11 +1,11 @@
 # Friend-Finder
 
-### Friend-Finder Homework Demo - (https://youtu.be/qOXvoWii7CI)
+Visit app here: https://findfriend-app.herokuapp.com/
 
-### Summary
+### Overview
 This app is a compatibility-based app, similar to a dating app that finds your match based on users input on a survey.
 
-### How it works
+### Usage
 
 User starts on the home page and clicks button to go to where they will be required to complete a survey.
 
