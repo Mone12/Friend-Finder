@@ -42,5 +42,6 @@ module.exports = function (app) {
   // send back to browser the best friend match
   res.json(friends[bestFriendIndex]);
 
-      });
-    };
+      };
+    });
+  };
