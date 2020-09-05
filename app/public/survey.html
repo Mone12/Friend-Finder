@@ -160,7 +160,7 @@
                                     <label>Question 10</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class="form-control" id="question10">
+                                <select class="form-control question" id="question10">
                                         <option class="question">Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -244,12 +244,16 @@
                 
             };
             console.log(newUser);
+
+            var currentURL = window.location.origin;
         
 
-    //    var currentURL = window.location.origin;
+     
         // Recieve AJAX call and post data
 
-        $.post("/api/friends", newUser, function(data) {
+        
+
+        $.post(currentURL + "/api/friends", newUser, function(data) {
 
             $("#match-name").text(data.name);
             $("#match-img").attr("src", data.photo);
