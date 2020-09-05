@@ -4,7 +4,7 @@ var friends = [
     "name":"Brittney",
     "photo":"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
-        5,
+        1,
         1,
         4,
         4,
@@ -79,7 +79,7 @@ var friends = [
     "photo":"https://images.pexels.com/photos/2287252/pexels-photo-2287252.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
         3,
-        3,
+        1,
         5,
         5,
         4,
@@ -98,9 +98,9 @@ var friends = [
         2,
         2,
         3,
-        4,
-        4,
-        4,
+        1,
+        1,
+        1,
         4,
         3
       ],
@@ -116,8 +116,8 @@ var friends = [
         4,
         3,
         4,
-        4,
-        4
+        1,
+        1
       ],
 
       "name":"Miguel",
@@ -138,16 +138,16 @@ var friends = [
       "name":"Sasha",
     "photo":"https://images.pexels.com/photos/2090658/pexels-photo-2090658.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
     "scores":[
-        5,
-        1,
-        4,
-        4,
-        5,
-        1,
         2,
-        5,
+        2,
         4,
-        5
+        4,
+        5,
+        2,
+        2,
+        2,
+        4,
+        3
       ]
     
     },

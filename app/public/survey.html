@@ -30,12 +30,12 @@
                                     <form>
                                         <div class="form-group">
                                             <label>Name (Required)</label>
-                                            <input type="text" class="form-control" id="name" type="text" placeholder="Name">
+                                            <input type="text" class="form-control" id="name" type="text" placeholder="Name" required />
                                         </div>
                                         
                                         <div class="form-group">
                                             <label> Link to Photo Image (Required)</label>
-                                             <input type="text" class="form-control" id="photo" type="text" placeholder="Link to image">
+                                             <input type="text" class="form-control" id="photo" type="text" placeholder="Link to image" required />
                                         </div>
                                         <hr>
                                     </form>
@@ -43,7 +43,7 @@
                                 <label>Question 1</label>
                                 <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="form-control question" id="question1" type="text" placeholder="Option 1">
+                                <select class="question" id="question1" type="text" placeholder="Option 1">
                                   <option>Select an option</option>  
                                   <option class="question">1 (Strongly Disagree)</option>
                                   <option class="question">2</option>
@@ -56,7 +56,7 @@
                               <label>Question 2</label>
                                 <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
                                 
-                                <select class="form-control question" id="question2">
+                                <select class="question" id="question2">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -69,7 +69,7 @@
                                 <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                               <div class="form-group">
                                
-                                <select class="form-control question" id="question3">
+                                <select class="question" id="question3">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -82,7 +82,7 @@
                                     <label>Question 4</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class="form-control question" id="question4">
+                                <select class="question" id="question4">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -95,7 +95,7 @@
                                     <label>Question 5</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="form-control question" id="question5">
+                                <select class="question" id="question5">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -108,7 +108,7 @@
                                     <label>Question 6</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="form-control question" id="question6">
+                                <select class="question" id="question6">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -121,7 +121,7 @@
                                     <label>Question 7</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="form-control question" id="question7">
+                                <select class="question" id="question7">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -134,7 +134,7 @@
                                     <label>Question 8</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                               
-                                <select class="form-control question" id="question8">
+                                <select class="question" id="question8">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -147,7 +147,7 @@
                                     <label>Question 9</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class="form-control question" id="question9">
+                                <select class="question" id="question9">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -160,7 +160,7 @@
                                     <label>Question 10</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class="form-control question" id="question10">
+                                <select class= question" id="question10">
                                         <option class="question">Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -209,70 +209,82 @@
         
 <!-- Display results for best match -->
 <script type="text/javascript">
-    $("#friendSearch").on("click", function (event) {
-        event.preventDefault();
 
-        // Vailidate Form
+      $("#friendSearch").on("click", function() {
+        function VailidateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") isValid = false;
+          });
 
-        var valid = true;
-        if ($("#name").val() === "" || $("#photo").val() === "") {
-            valid = false;
-            alert("Information Incomplete")
-        } else if ($(".question").val() === "") {
-            valid = false;
-            alert("Questions Incomplete")
         }
-        // takes in user input if valid is true
-        if (valid === true) {
-            var newUser = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("#question1").val(),
-                    $("#question2").val(),
-                    $("#question3").val(),
-                    $("#question4").val(),
-                    $("#question5").val(),
-                    $("#question6").val(),
-                    $("#question7").val(),
-                    $("#question8").val(),
-                    $("#question9").val(),
-                    $("#question10").val(),
-                
-                ]
-                
-                
-            };
-            console.log(newUser);
+      })
+    // $("#friendSearch").on("click", function (event) {
+    //     event.preventDefault();
 
-            var currentURL = window.location.origin;
+    //     // Vailidate Form
+
+
+    //     var valid = true;
+    //     if ($("#name").val() === "" || $("#photo").val() === "") {
+    //         valid = false;
+    //         alert("Information Incomplete")
+
+    //     } else if ($(".question").val() === "") {
+    //         valid = false;
+    //         alert("Questions Incomplete")
+    //     }
+    //     // takes in user input if valid is true
+    //     if (valid === true) {
+    //         var newUser = {
+    //             name: $("#name").val().trim(),
+    //             photo: $("#photo").val().trim(),
+    //             scores: [
+    //                 $("#question1").val(),
+    //                 $("#question2").val(),
+    //                 $("#question3").val(),
+    //                 $("#question4").val(),
+    //                 $("#question5").val(),
+    //                 $("#question6").val(),
+    //                 $("#question7").val(),
+    //                 $("#question8").val(),
+    //                 $("#question9").val(),
+    //                 $("#question10").val(),
+                
+    //             ]
+                
+                
+    //         };
+    //         console.log(newUser);
+
+    //         var currentURL = window.location.origin;
         
 
      
-        // Recieve AJAX call and post data
+    //     // Recieve AJAX call and post data
 
         
 
-        $.post(currentURL + "/api/friends", newUser, function(data) {
+    //     $.post(currentURL + "/api/friends", newUser, function(data) {
 
-            $("#match-name").text(data.name);
-            $("#match-img").attr("src", data.photo);
-            $("#bestMatch").modal("toggle");
-        });
+    //         $("#match-name").text(data.name);
+    //         $("#match-img").attr("src", data.photo);
+    //         $("#bestMatch").modal("toggle");
+    //     });
        
      
-        } else {
+    //     } else {
     
-            //required field is missing, show alert
-            alert("Survey is incomplete, please fill in all fields!");
+    //         //required field is missing, show alert
+    //         alert("Survey is incomplete, please fill in all fields!");
           
-            }
+    //         }
 
 
 
-    });
+    // });
 
-        </script>
+    //     </script>
    
     </body>
 </html>
