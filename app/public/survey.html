@@ -10,8 +10,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/1b542fd9fc.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+        <script src="https://kit.fontawesome.com/1b542fd9fc.js" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body>
             <div class="container">
@@ -27,7 +31,7 @@
                                     <hr>
                                     <h3 class="sh3">About You</h3>
                                     
-                                    <form>
+                                    <form method="POST" role="form" action="/api/friends">
                                         <div class="form-group">
                                             <label>Name (Required)</label>
                                             <input type="text" class="form-control" id="name" type="text" placeholder="Name" required />
@@ -38,12 +42,12 @@
                                              <input type="text" class="form-control" id="photo" type="text" placeholder="Link to image" required />
                                         </div>
                                         <hr>
-                                    </form>
+                                    
                             <div class="form-group">
                                 <label>Question 1</label>
                                 <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="question" id="question1" type="text" placeholder="Option 1">
+                                <select class="question" id="question1" name="scores" type="text" placeholder="Option 1">
                                   <option>Select an option</option>  
                                   <option class="question">1 (Strongly Disagree)</option>
                                   <option class="question">2</option>
@@ -56,7 +60,7 @@
                               <label>Question 2</label>
                                 <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
                                 
-                                <select class="question" id="question2">
+                                <select class="question" id="question2" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -69,7 +73,7 @@
                                 <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                               <div class="form-group">
                                
-                                <select class="question" id="question3">
+                                <select class="question" id="question3" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -82,7 +86,7 @@
                                     <label>Question 4</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class="question" id="question4">
+                                <select class="question" id="question4" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -95,7 +99,7 @@
                                     <label>Question 5</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="question" id="question5">
+                                <select class="question" id="question5" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -108,7 +112,7 @@
                                     <label>Question 6</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="question" id="question6">
+                                <select class="question" id="question6" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -121,7 +125,7 @@
                                     <label>Question 7</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                
-                                <select class="question" id="question7">
+                                <select class="question" id="question7" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -134,7 +138,7 @@
                                     <label>Question 8</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                               
-                                <select class="question" id="question8">
+                                <select class="question" id="question8" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -147,7 +151,7 @@
                                     <label>Question 9</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class="question" id="question9">
+                                <select class="question" id="question9" name="scores">
                                         <option>Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -160,7 +164,7 @@
                                     <label>Question 10</label>
                                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                                 
-                                <select class= question" id="question10">
+                                <select class= question" id="question10" name="scores">
                                         <option class="question">Select an option</option>  
                                         <option class="question">1 (Strongly Disagree)</option>
                                         <option class="question">2</option>
@@ -171,12 +175,14 @@
                               </div>
                         </div>
                     </div>  
-                    <a class="btn btn-secondary btn-lg shadow justify-content-left" id="friendSearch" role="button">Find Your Friend!</a>
+                    <a class="btn btn-secondary btn-lg shadow justify-content-left" id="friendSearch" onsubmit="validateForm()"
+                    data-toggle="modal" data-target="#results" role="button">Find Your Friend!</a>
+                  </form>
                 </div>
 
                 <!-- Create modal -->
 
-                <div class="modal fade" id="bestMatch" tabindex="-1" role="dialog">
+                <div class="modal fade" id="results" tabindex="-1" role="dialog">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -200,24 +206,56 @@
         
     
                       
-                      <script
-                      src="https://code.jquery.com/jquery-3.4.1.min.js"
-                      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                      crossorigin="anonymous"></script>
-                      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-                      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                      
         
 <!-- Display results for best match -->
-<script type="text/javascript">
+<script>
 
-      $("#friendSearch").on("click", function() {
-        function VailidateForm() {
+      $("#friendSearch").on("click", function(event) {
+        function vailidateForm() {
           var isValid = true;
           $(".form-control").each(function() {
-            if ($(this).val() === "") isValid = false;
+            if ($(".form-control").val() === "") isValid = false;
           });
 
-        }
+
+          $(".question").each(function() {
+            if ($(".question").val() === "") isValid = false;
+        });
+        return isValid;
+       }  
+
+       if(vailidateForm() === true) {
+         var userData = {
+           name: $("#name").val().trim(),
+           photo: $("#photo").val().trim(),
+           scores: [
+             $("#queston1").val(),
+             $("#queston2").val(),
+             $("#queston3").val(),
+             $("#queston4").val(),
+             $("#queston5").val(),
+             $("#queston6").val(),
+             $("#queston7").val(),
+             $("#queston8").val(),
+             $("#queston9").val(),
+             $("#queston10").val()
+           ]
+         };
+         var currentURL = window.location.origin;
+
+         $("#results").modal("toggle");
+
+         $.post(currentURL + "/api/friends", userData, function(data) {
+           $("#match-name").text(data.name);
+           $("#match-img").attr("src", data.photo);
+          
+         });
+        } else {
+          alert("Please fill out all fields")
+        
+       } 
+       return false;
       })
     // $("#friendSearch").on("click", function (event) {
     //     event.preventDefault();

@@ -1,11 +1,15 @@
 var friends = require ("../data/friends");
 
 module.exports = function (app) {
+
+  // Get friends
     app.get("/api/friends", function(req, res) {
         res.json(friends);
       });
 
+      // Add friend
       app.post("/api/friends", function(req, res) {
+       
         var totalDifference = 0;
         var bestFriend = {
           name: "",
@@ -17,20 +21,21 @@ module.exports = function (app) {
         var userName = userData.name;
         var userScores = userData.scores;
 
-        var b = userScores.map(function(item) {
-          return parseInt(item,10);
+        var num = userScores.map(function(item) {
+          return parseInt(item, 10);
         });
 
         userData = {
           name: req.body.name,
           photo: req.body.photo,
-          scores: b
+          scores: num
         };
 
         console.log("Name:" + userName);
-        console.log("User score" + userScores0);
+        console.log("User score" + userScores);
 
-        var sum = b.reduce((a, b) => a + b, 0);
+        var sum = num.reduce((a, b) => a + b, 0);
+
         console.log("Sum of users score" + sum);
         console.log("Best match friend diff" + bestFriend.minimumDifference);
        
@@ -40,9 +45,23 @@ module.exports = function (app) {
           console.log("Total Difference" + totalDifference);
           console.log("Best friend match Difference" + bestFriend.minimumDifference);
 
-          var bffScore = friends[i].scores.reduce((a,b) => a + b, 0);
-          console.log("Total friend score" + bffScore);
-          totalDifference += Math.abs(sum - bffScore);
+          var bffMatch = friends[i].scores.reduce((a,b) => a + b, 0);
+          
+          console.log("Total friend score" + bffMatch);
+          
+          totalDifference += Math.abs(sum - bffMatch);
+
+          for (var i = 0; i < friends.length; i++) {
+            console.log(frineds[i].name);
+            totalDifference = 0;
+            console.log("Total diff:", totalDifference);
+            console.log("best match friend diff:", bestFriend.minimumDifference);
+
+            var bffScore = friends[i].scores.reduce((a,b) => a+b, 0);
+
+            totalDifference += Math.abs(sum-bffScore);
+
+          
 
 
           if (totalDifference <= bestFriend.minimumDifference) {
@@ -58,7 +77,9 @@ module.exports = function (app) {
         console.log("New User added");
         console.log(userData);
         res.json(bestFriend);
-      });
+        }
+      
+      })
     };
   //       console.log(req.body.scores);
 
