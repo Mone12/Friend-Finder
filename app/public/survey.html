@@ -1,330 +1,266 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
-        <script src="https://kit.fontawesome.com/1b542fd9fc.js" crossorigin="anonymous"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body class="container">
+    <h1 class="invisible"> hello</h1>
+            <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title google-font">Your new friend is waiting to connect with you!</h3>
+                  
+                  <hr>
+                  <form method="POST" role="form" action="/api/friends">
+                    <h6>Tell us a little about yourself:</h6>
+                    <div class="form-group">
+                      <label for="name"><strong>Name (Required)</strong></label>
+                      <input name="name" id="name" class="form-control" type="text" placeholder="name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="photo"><strong>Photo (Required)</strong></label>
+                      <input name="photo" id="photo" class="form-control" type="text" placeholder="photo link" required>
+                    </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </head>
-    <body>
-            <div class="container">
-                    <div class="jumbotron bg-transparent text-center">
-                            <h1 class="display-4 header">
-                                    <i class="fas fa-hand-holding-heart heart"></i>
-                                Friend Finder</h1>
-                                <hr class="my-4">
-                
-                        <div class="card text-left shadow-lg">
-                                <div class="container">
-                                    <h2 class="survey-h2">Survey Questions</h2>
-                                    <hr>
-                                    <h3 class="sh3">About You</h3>
-                                    
-                                    <form method="POST" role="form" action="/api/friends">
-                                        <div class="form-group">
-                                            <label>Name (Required)</label>
-                                            <input type="text" class="form-control" id="name" type="text" placeholder="Name" required />
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label> Link to Photo Image (Required)</label>
-                                             <input type="text" class="form-control" id="photo" type="text" placeholder="Link to image" required />
-                                        </div>
-                                        <hr>
-                                    
-                            <div class="form-group">
-                                <label>Question 1</label>
-                                <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                               
-                                <select class="question" id="question1" name="scores" type="text" placeholder="Option 1">
-                                  <option>Select an option</option>  
-                                  <option class="question">1 (Strongly Disagree)</option>
-                                  <option class="question">2</option>
-                                  <option class="question">3</option>
-                                  <option class="question">4</option>
-                                  <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                              <label>Question 2</label>
-                                <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-                                
-                                <select class="question" id="question2" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <label>Question 3</label>
-                                <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                              <div class="form-group">
-                               
-                                <select class="question" id="question3" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 4</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                                
-                                <select class="question" id="question4" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 5</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                               
-                                <select class="question" id="question5" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 6</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                               
-                                <select class="question" id="question6" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 7</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                               
-                                <select class="question" id="question7" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 8</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                              
-                                <select class="question" id="question8" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 9</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                                
-                                <select class="question" id="question9" name="scores">
-                                        <option>Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                    <label>Question 10</label>
-                                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                                
-                                <select class= question" id="question10" name="scores">
-                                        <option class="question">Select an option</option>  
-                                        <option class="question">1 (Strongly Disagree)</option>
-                                        <option class="question">2</option>
-                                        <option class="question">3</option>
-                                        <option class="question">4</option>
-                                        <option class="question">5 (Strongly Agree)</option>
-                                </select>
-                              </div>
-                        </div>
-                    </div>  
-                    <a class="btn btn-secondary btn-lg shadow justify-content-left" id="friendSearch" onsubmit="validateForm()"
-                    data-toggle="modal" data-target="#results" role="button">Find Your Friend!</a>
+                    <hr>
+                  
+                    <div class="form-group">
+                      <label for="Q1"><strong>Question 1</strong></label>
+                      <p class="card-text">Your mind is always buzzing with unexplored ideas and plans.</p>
+                      <select class="custom-select" id="0" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value=1>Strongly Disagree</option>
+                        <option value=2>Disagree</option>
+                        <option value=3>Neutral</option>
+                        <option value=4>Agree</option>
+                        <option value=5>Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q2"><strong>Question 2</strong></label>
+                      <p class="card-text">Generally speaking, you rely more on your experience than your imagination.</p>
+                      <select class="custom-select" id="1" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q3"><strong>Question 3</strong></label>
+                      <p class="card-text">You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                      <select class="custom-select" id="2" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q4"><strong>Question 4</strong></label>
+                      <p class="card-text">You rarely do something just out of sheer curiosity.</p>
+                      <select class="custom-select" id="3" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q5"><strong>Question 5</strong></label>
+                      <p class="card-text">People can rarely upset you.</p>
+                      <select class="custom-select" id="4" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q6"><strong>Question 6</strong></label>
+                      <p class="card-text">It is often difficult for you to relate to other people’s feelings.</p>
+                      <select class="custom-select" id="5" name="scores">
+                        <option value="">Select an option</option>
+                        <option value="1" selected>Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q7"><strong>Question 7</strong></label>
+                      <p class="card-text">In a discussion, truth should be more important than people’s sensitivities.</p>
+                      <select class="custom-select" id="6" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q8"><strong>Question 8</strong></label>
+                      <p class="card-text">You rarely get carried away by fantasies and ideas.</p>
+                      <select class="custom-select" id="7" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q9"><strong>Question 9</strong></label>
+                      <p class="card-text">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+                      <select class="custom-select" id="8" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Q10"><strong>Question 10</strong></label>
+                      <p class="card-text">You feel more energetic after spending time with a group of people.</p>
+                      <select class="custom-select" id="9" name="scores">
+                        <option value="" selected>Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit" onsubmit="validateForm()" data-toggle="modal" data-target="#results" >Submit</button>
                   </form>
                 </div>
+            </div>
+            
+            <div class="row m-1">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><ul class="list-group list-group-horizontal-sm">
+                <a href="/api/friends"><li class="list-group-item">API Friends List</li></a>
+                <a href="https://github.com/creinsel/friend-finder"><li class="list-group-item">Git Repo</li></a></div>
+                <div class="col-md-4"></div>
+              
+                
+            </ul>
+            </div>
+              
+        </div>
 
-                <!-- Create modal -->
-
-                <div class="modal fade" id="results" tabindex="-1" role="dialog">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Congradulations, We found you a friend! Get in touch!</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <h2 id ="match-name"></h2>
-                              <img id="match-img" class="pic" src="#">
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      
+            </div>
+          </div>
+        </div>
 
         
-    
-                      
-                      
-        
-<!-- Display results for best match -->
-<script>
+<!-- Modal -->
+<div class="modal fade" id="results" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="">Say Hey to Your New Friend</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 id="bfName"></h5>
+            <img id="bfPic" class="pic-size" src="../public/assets/friends2.jpg"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-      $("#friendSearch").on("click", function(event) {
-        function vailidateForm() {
-          var isValid = true;
-          $(".form-control").each(function() {
-            if ($(".form-control").val() === "") isValid = false;
-          });
+        <script>
+         $(".submit").on("click", function(event){
+           function validateForm(){
+             var isValid = true;
+             console.log($(".form-control").val())
+             $(".form-control").each(function(){
+               if ($(".form-control").val()=== "") isValid = false;
+             });
+             
+             $(".custom-select").each(function(){
+               if ($(".custom-select").val()=== "") isValid = false;
+             });
+             return isValid;
+           }
+           if (validateForm()=== true){
+             var userData={
+               name: $("#name").val().trim(),
+               photo: $("#photo").val().trim(),
+               scores: [
+              $("#0").val(),
+              $("#1").val(),
+              $("#2").val(),
+              $("#3").val(),
+              $("#4").val(),
+              $("#5").val(),
+              $("#6").val(),
+              $("#7").val(),
+              $("#8").val(),
+              $("#9").val()
+               ]
+             };
+             var currentURL = window.location.origin;
 
+             $("#results").modal("toggle");
+            
 
-          $(".question").each(function() {
-            if ($(".question").val() === "") isValid = false;
-        });
-        return isValid;
-       }  
+             $.post(currentURL + "/api/friends", userData, function(data){
+             
+              console.log("name: ", data.name);
 
-       if(vailidateForm() === true) {
-         var userData = {
-           name: $("#name").val().trim(),
-           photo: $("#photo").val().trim(),
-           scores: [
-             $("#queston1").val(),
-             $("#queston2").val(),
-             $("#queston3").val(),
-             $("#queston4").val(),
-             $("#queston5").val(),
-             $("#queston6").val(),
-             $("#queston7").val(),
-             $("#queston8").val(),
-             $("#queston9").val(),
-             $("#queston10").val()
-           ]
-         };
-         var currentURL = window.location.origin;
+              $("#bfName").text(data.name);
+             $("#bfPic").attr("src", data.photo);
 
-         $("#results").modal("toggle");
-
-         $.post(currentURL + "/api/friends", userData, function(data) {
-           $("#match-name").text(data.name);
-           $("#match-img").attr("src", data.photo);
+               
+             });
+           }  else {
+             alert("Please answer all questions");
+           }
+           return false;
           
-         });
-        } else {
-          alert("Please fill out all fields")
-        
-       } 
-       return false;
-      })
-    // $("#friendSearch").on("click", function (event) {
-    //     event.preventDefault();
+         }) 
 
-    //     // Vailidate Form
-
-
-    //     var valid = true;
-    //     if ($("#name").val() === "" || $("#photo").val() === "") {
-    //         valid = false;
-    //         alert("Information Incomplete")
-
-    //     } else if ($(".question").val() === "") {
-    //         valid = false;
-    //         alert("Questions Incomplete")
-    //     }
-    //     // takes in user input if valid is true
-    //     if (valid === true) {
-    //         var newUser = {
-    //             name: $("#name").val().trim(),
-    //             photo: $("#photo").val().trim(),
-    //             scores: [
-    //                 $("#question1").val(),
-    //                 $("#question2").val(),
-    //                 $("#question3").val(),
-    //                 $("#question4").val(),
-    //                 $("#question5").val(),
-    //                 $("#question6").val(),
-    //                 $("#question7").val(),
-    //                 $("#question8").val(),
-    //                 $("#question9").val(),
-    //                 $("#question10").val(),
-                
-    //             ]
-                
-                
-    //         };
-    //         console.log(newUser);
-
-    //         var currentURL = window.location.origin;
-        
-
-     
-    //     // Recieve AJAX call and post data
-
-        
-
-    //     $.post(currentURL + "/api/friends", newUser, function(data) {
-
-    //         $("#match-name").text(data.name);
-    //         $("#match-img").attr("src", data.photo);
-    //         $("#bestMatch").modal("toggle");
-    //     });
        
-     
-    //     } else {
-    
-    //         //required field is missing, show alert
-    //         alert("Survey is incomplete, please fill in all fields!");
-          
-    //         }
-
-
-
-    // });
-
-    //     </script>
-   
-    </body>
+        </script>
+</body>
 </html>
-
-    

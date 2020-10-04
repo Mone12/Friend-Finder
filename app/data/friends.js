@@ -1,157 +1,34 @@
 var friends = [
     {
-    
-    name:"Brittney",
-    photo:"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-    scores:[
-        1,
-        1,
-        4,
-        4,
-        5,
-        1,
-        2,
-        5,
-        4,
-        1
-      ],
-    name:"Ingrid",
-    photo:"https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-    scores:[
-        5,
-        2,
-        2,
-        2,
-        2,
-        4,
-        3,
-        3,
-        5,
-        2
-      ],
-
-    name:"Justin",
-    photo:"https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-    scores:[
-        4,
-        2,
-        5,
-        5,
-        5,
-        2,
-        2,
-        4,
-        4,
-        1
-      ],
-
-    name:"Ali",
-    photo:"https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300" ,
-    scores:[
-        3,
-        3,
-        4,
-        4,
-        5,
-        2,
-        2,
-        4,
-        4,
-        3
-      ],
-
-    name:"Jasmine",
-    photo:"https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-    scores:[
-        3,
-        3,
-        5,
-        4,
-        3,
-        2,
-        1,
-        5,
-        4,
-        3
-      ],
-
-    name:"Chuck",
-    photo:"https://images.pexels.com/photos/2287252/pexels-photo-2287252.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-    scores:[
-        3,
-        1,
-        5,
-        5,
-        4,
-        3,
-        3,
-        4,
-        5,
-        2
-      ],
-
-     name:"Tyrone",
-     photo:"https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300" ,
-     scores:[
-        2,
-        4,
-        2,
-        2,
-        3,
-        1,
-        1,
-        1,
-        4,
-        3
-      ],
-
-    name:"Brad",
-    photo:"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-    scores:[
-        2,
-        2,
-        3,
-        3,
-        5,
-        4,
-        3,
-        4,
-        1,
-        1
-      ],
-
-     name:"Miguel",
-     photo:"https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-     scores:[
-        5,
-        1,
-        4,
-        4,
-        3,
-        2,
-        4,
-        4,
-        3,
-        3
-      ],
-
-      name:"Sasha",
-      photo:"https://images.pexels.com/photos/2090658/pexels-photo-2090658.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=200&amp;w=300",
-      scores:[
-        2,
-        2,
-        4,
-        4,
-        5,
-        2,
-        2,
-        2,
-        4,
-        3
-      ]
-    
+        name:"Brennan Huff",
+        photo:"https://pbs.twimg.com/profile_images/706234525274267648/DA46N6iE_400x400.jpg",
+        scores:[1,1,1,1,1,1,1,1,1,1]
     },
+    {
+        name:"The Grinch",
+        photo:"https://www.indiewire.com/wp-content/uploads/2018/02/shutterstock_5875878f.jpg?w=780",
+        scores:[5,4,1,2,5,5,3,5,2,1]
+    },
+    {
+        name:"Mary Katherine Gallagher",
+        photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMoVjuzfMYAS6gFP3ERXF4wX19_gIlNGpBwQ1D9_-Et240xja11Q&s",
+        scores:[3,1,4,5,5,1,2,2,4,1]
+    },
+    {
+        name:"McLovin",
+        photo:"https://i3.ytimg.com/vi/vocTWwjiq60/mqdefault.jpg",
+        scores:[2,3,4,5,1,2,3,4,5,1]
+    },
+    {
+        name:"Cady Heron",
+        photo:"https://pngimage.net/wp-content/uploads/2018/05/cady-heron-png-1.png",
+        scores:[1,1,1,5,5,1,5,1,2,1]
+    },
+    {
+        name:"Regina George",
+        photo:"https://i.pinimg.com/originals/ab/79/d1/ab79d1eb0c2c5220beb2751928c773b2.jpg",
+        scores:[5,1,1,5,1,1,4,1,2,3]
+    },  
 ];
 
-
-  module.exports = friends;
+module.exports = friends;
