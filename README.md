@@ -1,28 +1,20 @@
 # Friend-Finder
 
-Visit app here: https://findfriend-app.herokuapp.com/
-
-### Overview
-This app is a compatibility-based app, similar to a dating app that finds your match based on users input on a survey.
+ Friend Finder is an app that is built on node and express that finds your match, similar to a dating app but for for finding friends. Based on a survey that users are prompt to fill out, Friend Finder compares users' results with previous results from other users stored in the app's data.  
 
 ### Usage
+Friend Finder is deployed through Heroku. To access the app, click the link here: https://findfriend-app.herokuapp.com/.
 
 User starts on the home page and clicks button to go to where they will be required to complete a survey.
 
-![img1](https://user-images.githubusercontent.com/54917461/77877295-37d27400-720a-11ea-8d72-a4c46b6e75c0.png)
-
 Once there, user is required to fill out all fields starting with there name and link to photo.
 
-![img2](https://user-images.githubusercontent.com/54917461/77877262-1f625980-720a-11ea-814f-a8d15fc8281e.png)
+Once filled out and all questions are completed, user hits the "find friend" button.
 
-Once filled out and all question are complete, user hits the "find friend" button.
+A modal with a name and face will pop up showing the person to be the users match and there you have your new friend!
 
-![img3](https://user-images.githubusercontent.com/54917461/77877268-225d4a00-720a-11ea-8f37-bb633e105c12.png)
+### Demo
 
-
-A modal with a name and face will pop up showing the person to be the users match
-
-![img4](https://user-images.githubusercontent.com/54917461/77877269-24270d80-720a-11ea-91e0-cb33860eb584.png)
 
 
 ## Built with:
