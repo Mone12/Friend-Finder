@@ -24,4 +24,4 @@ A modal with a name and face will pop up showing the person to be the users matc
 * bootstrap
 
 ## Credits
-<b>Created By:</b> Mone Duncans-Francis -[Mone12](https://github.com/Mone12) 
+<b>Created By:</b> Mone Duncans-Francis  -[Mone12](https://github.com/Mone12) 
