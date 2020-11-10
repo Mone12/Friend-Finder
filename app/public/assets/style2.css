@@ -1,7 +1,8 @@
 body {
-    background-image: url("./images/friends-4.jpg");
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
+    background-image: url("./images/friends.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
 }
 
 .cover-container {
@@ -52,6 +53,12 @@ body {
 
 .card {
     background-color: rgba(255, 251, 251, 0.685);
+}
+
+.list-group-item {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
 }
 
 /* Image styling */
