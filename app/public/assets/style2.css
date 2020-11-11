@@ -76,27 +76,9 @@ body {
     }
   }
 
-.card {
-    background-color: rgba(255, 251, 251, 0.685);
-}
 
-.list-group-item {
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-}
 
-/* Image styling */
 
-.pic-size {
-    height: 400px;
-    width: 450px;
-}
 
-/*
- * Footer
- */
- .mastfoot {
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.856);
-  }
+
+

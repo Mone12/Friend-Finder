@@ -1,10 +1,4 @@
 
-.container {
-    background-image: url("./images/friends.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
 
 /* Home Page Styling */
 /*
@@ -37,8 +31,9 @@ html,
 body {
     background-image: url("./images/friends.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
+   
   
 }
 
@@ -104,6 +99,7 @@ body {
     color: rgb(250, 248, 248);
 }
 
+
 /*
  * Cover
  */
@@ -115,20 +111,49 @@ body {
   font-weight: 700;
 }
 
+/* Survey Page Styling */
 
-/*
- * Footer
- */
-.mastfoot {
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.856);
+body.survey-page {
+    height: 0%;
 }
 
+.card {
+    background-color: rgba(228, 182, 98, 0.685);
+}
 
-/* Image styling */
+.list-group-item {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
 
+/* Modal styling */
+
+.modal-title {
+    color: black;
+    text-shadow: none;
+}
+
+.modal-name {
+    padding-bottom: 10px;
+    color: black;
+    text-shadow: none;
+}
 .pic-size {
     height: 400px;
     width: 450px;
 }
+
+
+/*
+ * Footer
+ */
+ .mastfoot {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.856);
+  }
+
+
+
+
 
