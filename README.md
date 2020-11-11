@@ -14,7 +14,7 @@ Once filled out and all questions are completed, user hits the "find friend" but
 A modal with a name and face will pop up showing the person to be the users match and there you have your new friend!
 
 ## Demo
-![Friend Finder Demo](\app\public\assets\images\FriendFinder_Demo.gif)
+![Friend Finder Demo](app\public\assets\images\FriendFinder_Demo.gif)
 
 
 ## Built with:
