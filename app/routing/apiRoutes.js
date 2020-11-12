@@ -1,16 +1,19 @@
+// LOAD DATA
+//  =============================================================
 var friends=require("../data/friends");
 
 
 module.exports = function(app) {
-
-    // Get all friends
+  // API Routes
+// =============================================================
+    // Dispaly All Friends
     app.get("/api/friends", function(req, res) {
   
      res.json(friends);
   
     });
 
-    // Add a friend
+    // Add Friend
     app.post("/api/friends", function(req, res) {
       
      var totalDifference=0;
@@ -45,6 +48,7 @@ module.exports = function(app) {
        console.log("total difference: ", totalDifference);
        console.log("best match friend difference 2 ", bestMatch.friendDifference);
 
+        
 
        var match= friends[i].scores.reduce((a,b) => a+b, 0);
 
@@ -62,7 +66,8 @@ module.exports = function(app) {
          
 
          totalDifference += Math.abs(sum-bfriendScore);
-
+      
+         //check to see if score is less than or equal to bestMatcch (closest match)
          if(totalDifference <= bestMatch.friendDifference){
 
           bestMatch.name= friends[i].name;
@@ -73,12 +78,16 @@ module.exports = function(app) {
        }
 
        console.log(bestMatch);
+
+      //Add newFriend to friend list after finding closest match
        friends.push(userData);
 
       //  console.log(friends);
 
        console.log("new friend added");
        console.log(userData);
+
+      //Reutrn Match
        res.json(bestMatch);
 
      }

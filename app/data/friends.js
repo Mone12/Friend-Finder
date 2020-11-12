@@ -1,3 +1,4 @@
+// Possible Friends
 var friends = [
     {
         name:"Brittney",
